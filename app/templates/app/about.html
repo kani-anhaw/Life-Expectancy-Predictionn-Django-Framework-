@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Poppins:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<style>
+
+    body{
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+          .about {
+        position: relative;
+        padding: 20px;
+        align-items: center;
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        margin: 0 auto; /* this will center the div horizontally /
+        display: block; / this will make the div a block element */
+       margin-top: 15%;
+        transform: translateY(-30%);
+        }
+    .about p{
+        display: flex;
+        text-align: justify;
+        text-justify: inter-word;
+        padding: 15px;
+   }
+
+    .about p i{
+        display: flex;
+        text-align: justify;
+        text-justify: inter-word;
+   }
+   .developer{
+       position: absolute;
+       bottom: 0;
+       right: 0;
+       padding: 30px;
+
+   }
+    .button1:hover{
+           background-color: black;
+           color: white;
+       }
+
+</style>
+<body>
+<div class="about">
+<h1>
+    About the System
+</h1>
+<p>
+   The Life Expectancy Prediction System is a web-based tool that
+    utilizes machine learning techniques to predict an individual's
+    lifespan based on various factors such as economic conditions,
+    immunization rates, mortality probability, social conditions, and health factors.
+    While the system generates predictions with an accuracy of 82%, it is
+    important to note that these predictions may not always align with actual
+    real-life conditions. To improve the accuracy of the predictions, the system
+    needs to be fed with more updated data and retrained for better results.
+    <i class="developer">- Developer</i>
+</p>
+</div>
+
+ <a href="{% url 'index' %}"> <button class="button button1" style="font-family:'Poppins', sans-serif; font-size: large; padding:15px; border:3px solid black; width: 150px; margin-top:-5px;">Exit</button></a>
+
+</body>
+</html>

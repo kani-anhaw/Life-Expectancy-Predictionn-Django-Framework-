@@ -1,0 +1,238 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Poppins:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+           body{
+           background-color: black;
+               font-family: 'Poppins', sans-serif;
+       }
+
+       .container{
+           margin: 0;
+           display:grid;
+           grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+           grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+           background-color: white;
+
+       }
+
+       .item1{
+           background: white;
+           border-bottom: 8px black solid;
+           grid-column:1/11;
+           grid-row:1/1;
+           padding: 10px 10px 10px 30px;
+           font-family: 'Poppins', sans-serif;
+           font-size: 20px;
+           color: black;
+       }
+
+        .item2{
+            grid-column: 6/7;
+            grid-row: 1/1;
+            background-color: black;
+            color:white;
+            margin-right:0;
+            padding:10px;
+            text-align: center;
+        }
+
+        .item2:hover{
+            color:red;
+        }
+
+
+       .item3{
+           grid-row: 2/3;
+           grid-column:5/7;
+           padding: 15px;
+           border-left: 8px black solid;
+           border-bottom: 8px black solid;
+           font-size: 24px;
+           text-align: center;
+
+       }
+       .item3:hover{
+           background-color: #ffd1b3;
+       }
+
+       .item4{
+           grid-row: 3 / 4;
+           grid-column: 5/7;
+           padding: 15px;
+           border-left: 8px black solid;
+           border-bottom: 8px black solid;
+           font-size: 24px;
+           text-align: center;
+
+       }
+
+       .item4:hover{
+            background-color: #b3ffec;
+       }
+
+       .item5{
+           grid-row: 4 / 5;
+           grid-column: 5/7;
+           padding: 15px;
+           border-left: 8px black solid;
+           border-bottom: 8px black solid;
+           font-size: 24px;
+           text-align: center;
+   }
+
+       .item5:hover
+       {
+        background-color: #b3ffb3;
+       }
+       .item6{
+           grid-row: 5/6;
+           grid-column: 5/7;
+           padding: 15px;
+           border-left: 8px black solid;
+           border-bottom: 8px black solid;
+           font-size: 24px;
+           text-align: center;
+
+   }
+       .item6:hover{
+            background-color:#b3c6ff ;
+       }
+
+        .item7{
+           grid-row: 6/7;
+           grid-column: 5/7;
+           padding: 15px;
+           border-left: 8px black solid;
+           border-bottom: 8px black solid;
+           font-size: 24px;
+           text-align: center;
+
+         }
+        .item7:hover{
+            background-color: #ecffb3;
+        }
+
+        .item8{
+           grid-row: 7/10;
+           grid-column: 5/7;
+           padding: 5px;
+           border-left: 8px black solid;
+           font-size: 24px;
+           text-align: center;
+            background-color: white;
+
+         }
+
+          .item9{
+               grid-row: 2/9;
+               grid-column: 1/5;
+               padding: 5px;
+               font-size: 24px;
+               text-align: center;
+              background-color: white;
+                border-bottom: 8px black solid;
+         }
+
+          .item10{
+              grid-column: 1/4;
+              grid-row: 8/12;
+              border-top: 8px black solid;
+
+              font-size: 18px;
+              text-align: center;
+
+          }
+           .item11{
+                grid-column: 4/6;
+                grid-row: 8/12;
+                border-left: 8px black solid;
+                  font-size: 18px;
+                text-align: center;
+          }
+           .item11:hover{
+
+               color:mediumseagreen;
+           }
+
+           .button1:hover{
+
+               color: blue;
+               font-size: larger;
+               background-color: black;
+           }
+
+</style>
+
+
+<body>
+
+<div class="container">
+    <div class="item item1" STYLE="letter-spacing: 5px;">LIFE EXPECTANCY PREDICTION</div>
+    <div class="item item2"> <a href="{% url 'index' %}" style="text-decoration: none;  color: white;">Exit</a></div>
+
+    <div class="item item3"> <a href="{% url 'immunization' %}" style="text-decoration: none;  color: black;">IMMUNIZATION</a></div>
+    <div class="item item4"><a href="{% url 'mortality' %}" style="text-decoration: none;  color: black;">MORTALITY </a></div>
+    <div class="item item5"><a href="{% url 'health' %}" style="text-decoration: none;  color: black;">HEALTH </a></div>
+    <div class="item item6"> <a href="{% url 'economic' %}" style="text-decoration: none;  color: black;">ECONOMIC </a></div>
+    <div class="item item7"><a href="{% url 'social' %}" style="text-decoration: none;  color: black;"> SOCIAL </a></div>
+    <div class="item item8"><h1 ><i style="font-size: medium; color: darkgray">Predicted life expectancy will be displayed here: <br></i><strong style="font-weight: bolder"> {{ result2 }}</strong></h1></div>
+    <div class="item item10">
+
+        <form action='/classify'> <button class="button button1"
+                                  style="font-family:'Poppins', sans-serif;
+                                  font-size: 24px;
+                                  padding:15px;
+                                 border-color: white;
+                                  margin-top: 70px;
+                                  width: 100%;
+                                  height: 70px;
+                                  background-color: white;
+                                  ">PREDICT</button></form></div>
+
+
+    <div class="item item11">
+        <button class="button button1" style="font-family:'Poppins', sans-serif;
+        font-size: 18px;
+        padding:10px;
+        float:left;
+        border:3px solid white;
+        margin-top: 80px;
+        margin-bottom: 0;
+        text-align: center;
+        background-color: white;
+
+        ;">Submit</button>
+
+
+
+
+</div>
+
+    <div class="item item9" >
+
+
+
+ {% block content %}
+
+    {% endblock %}
+    </div>
+
+
+
+</div>
+</body>
+</html>

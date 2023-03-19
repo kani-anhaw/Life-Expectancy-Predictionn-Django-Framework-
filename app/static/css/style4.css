@@ -1,0 +1,114 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Roboto:wght@500&display=swap');
+
+    .banner {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+
+
+        font-size: 64px;
+        text-align: center;
+        z-index: 999;
+        position: relative;
+    }
+
+    .butt {
+        padding: 15px;
+        width: 120px;
+        background-color: rgba(0, 0, 255, 0);
+        border: 3px solid white;
+        z-index: 999;
+        position: relative;
+        text-align: center;
+        font-weight: bolder;
+        color: white;
+
+    }
+    .butt:hover{
+        color: black;
+        background-color: white;
+
+    }
+
+
+
+
+  /*Base HTML*/
+.container1 {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin: auto 0;
+    position: relative;
+    width: 30%;
+    justify-content: center;
+}
+
+ul li a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+.result{
+    background-color: gold;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.result h1{
+    text-shadow: black;
+    font-size: large;
+}
+
+/*Economic*/
+  .catt1 {
+        float: right;
+        background-color: cornflowerblue;
+        padding: 50px;
+        margin-left: 425px;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: 491px;
+
+}
+
+/*  Econ*/
+  .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background:white;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}

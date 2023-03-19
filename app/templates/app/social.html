@@ -1,0 +1,94 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+        .item7{
+
+            background-color: #ccff33;
+            color: white    ;
+       }
+        .item9{
+            background-color: #ecffb3;
+        }
+
+         .catt1 > .contain > .row > input{
+            border-radius: 5px;
+         }
+
+        .catt1 > .contain > .row > input:focus{
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 10px #9ecaed;
+    }
+    </style>
+     <link rel="stylesheet" href= '{% static "css/style.css" %}'>
+
+
+    <form method= 'post'  action='/take4'>
+    {% csrf_token %}
+
+
+    <div class="catt1" style="text-align: center " >
+
+
+        <div class="contain" style="  margin: 10px; text-align: left">
+
+            <div class="row g-3" style="padding:10px; text-align: center; ">
+                <br>
+                <label for="inputEmail4" style="color: black; font-size: 18px; text-align: left ;" >Schooling : <span id="demo"></span></label><br>
+                <div class="slidecontainer" style="height: 10px;">
+                    <input type="range" min="1" max="18" value="9" class="slider" id="myRange" name="v20" style="width:300px">
+
+                </div>
+            </div> <br>
+
+            <div class="row g-3" style="padding:10px; text-align: center;">
+                <label for="inputEmail4" style="color: black; font-size: 18px; " >Population</label><br>
+                <input type="text" name="v16" class="form-control" placeholder="" required style="font-size: 24px; height: 16px; width:300px " >
+            </div>
+
+
+
+            <br>
+            <form class="form1" autocomplete="on" >
+                <div style="text-align: center">
+                    <label for="inputEmail4" style="color: black; font-size: 18px;"> Country</label><br>
+                    <input type="text" id="input" name="v21" placeholder="Type a country here..." />
+                </div>
+                <ul class="list"></ul>
+
+            </form>
+
+
+
+
+            <div class="parent">
+                <button class="button button1" type="submit" style="font-family:'Poppins', sans-serif;
+                                float:left; font-size: medium; padding:10px; border:3px solid white;
+                                width: 200px; position: absolute; bottom: 0; left: 700px; background-color: white;
+                                transform: translateX(-50%);">Submit</button>
+            </div>
+
+        </div>
+    </div>
+    </form>
+
+
+
+            <script src="{% static "css/script.js" %}"></script>
+
+ <script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+ </script>
+
+
+
+{% endblock %}

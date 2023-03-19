@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Poppins:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel='stylesheet'  href= '{% static "css/style4.css" %}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+       body{
+           background-color: black;
+       }
+
+       .container{
+           margin: 0;
+           display:grid;
+           grid-template-columns: repeat(5, 1fr);
+           background-color: white;
+
+       }
+
+       .item1{
+           background: white;
+           border-bottom: 8px black solid;
+           grid-column:span 5;
+           grid-row: span 3;
+           padding:10px;
+           padding-left:30px;
+           font-family: 'Poppins', sans-serif;
+           font-size: 24px;
+       }
+       .item2{
+           background-image: url("{% static "img/crowd8.jpg" %}");
+           grid-column:span 3;
+           grid-row: span 100;
+           border-right: 8px black solid;
+           font-family: 'Poppins', sans-serif;
+           font-size: 72px;
+           padding-left:50px;
+           color:white;
+           text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+       }
+
+       .button1:hover{
+           background-color: black;
+           color: white;
+       }
+       .item3{
+           grid-column:span 2;
+           border-bottom: 8px black solid;
+           font-family: 'Poppins', sans-serif;
+           font-size: 36px;
+           padding-left: 30px;
+           background: #ffcccc
+       }
+       .item3:hover{
+           background-color: #ff0000;
+           color:white;
+       }
+       .item4{
+           grid-column: span 2;
+           grid-row: span 99;
+           font-family: 'Poppins', sans-serif;
+           font-size: 36px;
+           padding-left: 30px;
+           background-color: #cce0ff
+       }
+       .item4:hover{
+           background-color: #0066ff;
+           color: white;
+       }
+
+    </style>
+
+
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+    <div class="item item1">BIG DATA ANALYTICS</div>
+    <div class="item item2"> <br><br><br>Life Expectancy Prediction<br>
+       <a href="{% url 'immunization' %}"> <button class="button button1" style="font-family:'Poppins', sans-serif; font-size: large; padding:15px; border:3px solid black; width: 150px; margin-bottom: 50px;">Begin</button></a>
+    </div>
+    <div class="item item3"> <a href="https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who" style="text-decoration: none; color:black;"> <br><br><br><br>About the Data <br><br> </a></div>
+    <div class="item item4"> <a href="{% url 'about' %}" style="text-decoration: none; color:black;"><br><br><br><br>About the System <br></a> </div>
+</div>
+
+
+
+</body>
+
+</html>
+
