@@ -1,6 +1,6 @@
 Hello,
 The web application is yet responsive and therefore changes of screensize may affect
- the UI but not the functionalities. Thank you for understandig. 
+ the UI but not the functionalities. Thank you for understanding. 
 
 Capabilities:
 	1. The system can generate predictions even if not all input fields are filled. 
